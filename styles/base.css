@@ -1,17 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap") ;
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap");
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -29,6 +23,7 @@ header h1 {
 #course-title {
     display: block;
     font-size: 1.5rem;
+    font-weight: bold; 
 }
 
 nav {
@@ -41,21 +36,13 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 0.5rem ;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 nav a:hover {
     background-color: #f4d03f;
     color: #333;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    margin-top: 0.5rem;
-    display: flex;
-    padding: 0;
-    justify-content: space-evenly;
-}
 
 main {
     max-width: 1000px;
@@ -75,8 +62,8 @@ main h1 {
 
 .card {
     background: white;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -98,7 +85,7 @@ main h1 {
 }
 
 footer {
-    background-color: #002b5b;
+    background: #002b5b;
     color: white;
     text-align: center;
     padding: 1rem;
