@@ -1,0 +1,14 @@
+@media (min-width: 600px) {
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        background: none;
+    }
+    #menu {
+        display: none;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
