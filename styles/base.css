@@ -8,6 +8,7 @@ body {
     padding: 0;
 }
 
+/* ===== HEADER ===== */
 header {
     background-color: #002b5b;
     color: white;
@@ -15,15 +16,11 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-family: 'Merriweather', sans-serif;
-    font-size: 1.5rem;
-}
-
 #course-title {
     display: block;
     font-size: 1.5rem;
-    font-weight: bold; 
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 nav {
@@ -35,31 +32,37 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem ;
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s;
 }
+
 nav a:hover {
     background-color: #f4d03f;
     color: #333;
 }
 
-
+/* ===== MAIN LAYOUT ===== */
 main {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    /* left wide, right narrow */
     gap: 1.5rem;
+    padding: 0 1rem;
+    align-items: start;
 }
 
 main h1 {
     grid-column: 1 / -1;
     margin-bottom: 1rem;
     font-family: 'Merriweather', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #002b5b;
+    text-align: center;
 }
 
+/* ===== CARD STYLE ===== */
 .card {
     background: white;
     border-radius: 10px;
@@ -72,9 +75,11 @@ main h1 {
     background-color: #002b5b;
     color: white;
     padding: 0.5rem;
-    border-radius: 6px 6px 0 0;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    border-radius: 6px;
+    margin: -1rem -1rem 1rem -1rem;
+    /* spans full card width */
+    font-size: 1.1rem;
+    text-align: center;
 }
 
 .card img {
@@ -84,6 +89,28 @@ main h1 {
     border-radius: 6px;
 }
 
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.card li {
+    margin: 0.5rem 0;
+}
+
+.card a {
+    color: #002b5b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
 footer {
     background: #002b5b;
     color: white;
@@ -98,5 +125,12 @@ footer p {
 }
 
 #lastModified {
-    color: #f4d03f
+    color: #f4d03f;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
