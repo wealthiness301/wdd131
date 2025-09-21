@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #bc002d;
+    /* red from Japan's flag */
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info {
+    margin: 2rem 0;
+}
+
+.weather {
+    border-top: 2px solid var(--primary-color);
+    padding-top: 1rem;
+    position: relative;
+}
+
+.weather h2::after {
+    content: " ⛅";
+    /* pseudo-element for wide view */
+    display: none;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Mobile-first */
+.weather-icon-mobile img {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Larger screens */
+@media (min-width: 700px) {
+    .weather h2::after {
+        display: inline;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover Japan - culture, nature, and weather.">
+        <title>Japan</title>
+        <link rel="stylesheet" href="styles/place.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to Japan</h1>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <picture>
+                    <source srcset="images/japan-hero-large.webp" media="(min-width: 800px)">
+                    <source srcset="images/japan-hero-medium.webp" media="(min-width: 500px)">
+                    <img src="images/japan-hero-small.webp" alt="Mount Fuji in Japan">
+                </picture>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info">
+                <h2>About Japan</h2>
+                <p>Japan is an island nation in East Asia known for its rich culture, advanced technology, and natural
+                    beauty. From Mount Fuji to bustling Tokyo, Japan blends tradition with modern life.</p>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+                <h2>Weather</h2>
+                <div class="weather-icon-mobile">
+                    <img src="images/weather-icon.svg" alt="Weather Icon">
+                </div>
+                <p><strong>Temperature:</strong> <span id="temperature">41</span> °F</p>
+                <p><strong>Wind Speed:</strong> <span id="wind">8</span> mph</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+        </footer>
+    </body>
+
+</html>
