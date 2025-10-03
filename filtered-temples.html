@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Temple Album Filter">
+        <meta name="author" content="Wealth Obehioye Osaigbovo">
+        <title>Filtered Temple Album</title>
+        <link rel="stylesheet" href="styles/filtered-temples.css">
+        <link rel="stylesheet" href="styles/filtered-temples-large.css">
+        <script src="scripts/filtered-temples.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Temple Album</h1>
+            <nav aria-label="Temple Filters">
+                <ul>
+                    <li><button id="home" aria-pressed="false">All Temples</button></li>
+                    <li><button id="old" aria-pressed="false">Old</button></li>
+                    <li><button id="new" aria-pressed="false">New</button></li>
+                    <li><button id="large" aria-pressed="false">Large</button></li>
+                    <li><button id="small" aria-pressed="false">Small</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 class="visually-hidden">Temple Collection</h2>
+            <section id="temple cards" class="card-grid" aria-live="polite"></section>
+        </main>
+        <footer>
+            <p>&copy; <span id="year"></span> | Temple Album | Wealth Obehioye Osaigbovo</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </footer>
+    </body>
+
+</html>
