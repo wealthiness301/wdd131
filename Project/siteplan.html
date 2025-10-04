@@ -1,0 +1,410 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Site Plan — WDD 131</title> <!-- Google Fonts (headings + body) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        <style>
+            /* COLOR SCHEME apply these to the document */
+            :root {
+                --primary: #0A6E8C;
+                /* used for headings, accents */
+                --accent: #FFB703;
+                /* used for call-to-action, highlights */
+                --bg: #F4F7F9;
+                /* page background */
+                --card: #FFFFFF;
+                /* cards / paper */
+                --muted: #6B7280;
+                /* secondary text */
+            }
+
+            /* Basic layout & typography */
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 2rem;
+                font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+                background: var(--bg);
+                color: #0F1724;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .container {
+                max-width: 980px;
+                margin: 0 auto;
+            }
+
+            header {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1.25rem;
+                background: var(--card);
+                padding: 1rem;
+                border-radius: 12px;
+                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06)
+            }
+
+            /* logo */
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: .75rem
+            }
+
+            .logo svg {
+                width: 56px;
+                height: 56px;
+                border-radius: 8px
+            }
+
+            h1 {
+                font-family: 'Montserrat', system-ui;
+                font-weight: 700;
+                color: var(--primary);
+                margin: 0;
+                font-size: 1.4rem
+            }
+
+            .subtitle {
+                color: var(--muted);
+                font-size: 0.95rem
+            }
+
+            section.card {
+                background: var(--card);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+                box-shadow: 0 4px 12px rgba(2, 6, 23, 0.04)
+            }
+
+            section.card h2 {
+                margin-top: 0;
+                font-family: 'Montserrat', system-ui;
+                color: var(--primary);
+                font-size: 1.05rem
+            }
+
+            section.card p,
+            section.card li {
+                color: #0F1724;
+                line-height: 1.45
+            }
+
+            .two-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem
+            }
+
+            .swatch {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: .5rem;
+                border-radius: 8px
+            }
+
+            .swatch .box {
+                width: 48px;
+                height: 48px;
+                border-radius: 6px;
+                flex-shrink: 0;
+                box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.08)
+            }
+
+            .muted {
+                color: var(--muted);
+                font-size: 0.95rem
+            }
+
+            /* Wireframe visuals */
+            .wireframes {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap
+            }
+
+            .wf {
+                flex: 1;
+                min-width: 240px;
+                background: #F9FBFC;
+                border-radius: 8px;
+                padding: 0.75rem;
+                border: 1px dashed rgba(11, 14, 18, 0.06)
+            }
+
+            .wf svg {
+                width: 100%;
+                height: auto
+            }
+
+            footer {
+                margin-top: 1.25rem;
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.9rem
+            }
+
+            /* Small helper */
+            pre {
+                background: #0b1720;
+                color: #fff;
+                padding: .6rem;
+                border-radius: 6px;
+                overflow: auto;
+                font-size: 0.88rem
+            }
+
+            .cta {
+                display: inline-block;
+                padding: .45rem .8rem;
+                border-radius: 8px;
+                background: var(--accent);
+                color: #072227;
+                font-weight: 600;
+                text-decoration: none
+            }
+
+            /* Responsive */
+            @media (max-width:720px) {
+                .two-col {
+                    grid-template-columns: 1fr
+                }
+
+                header {
+                    flex-direction: row
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo" aria-hidden="true">
+                    <!-- simple inline SVG logo so your siteplan file is self-contained -->
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Site plan logo">
+                        <rect width="100" height="100" rx="16" fill="var(--primary)" />
+                        <text x="50%" y="54%" font-family="Montserrat, sans-serif" font-size="44" font-weight="700"
+                            fill="white" text-anchor="middle" dominant-baseline="middle">SP</text>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Site Plan Template — WDD 131</h1>
+                    <div class="subtitle">A single-file site plan you can edit: <code>siteplan.html</code></div>
+                </div>
+
+                <div style="margin-left:auto">
+                    <a class="cta" href="#wireframe">Preview Wireframes</a>
+                </div>
+            </header>
+
+            <!-- SITE NAME -->
+            <section class="card" id="site-name">
+                <h2>Site Name</h2>
+                <p><strong>Placeholder:</strong> <em>[Your Site Name Here]</em></p>
+                <p><strong>Short description / reasoning:</strong> Explain why this name fits your project's topic,
+                    audience, or brand (example: "Bay Area eBiking Club — a regional community for electric bicycle
+                    enthusiasts").</p>
+                <p class="muted"><em>Tip:</em> Choose a short, memorable name and check optional domain availability
+                    (not required for class).</p>
+            </section>
+
+            <!-- PURPOSE -->
+            <section class="card" id="purpose">
+                <h2>Site Purpose</h2>
+                <p>Describe the scope of the site and what services / information it will provide. Keep the purpose
+                    focused and actionable.</p>
+                <ul>
+                    <li>Primary purpose: <em>[e.g., provide membership details, publish trail guides, sell products,
+                            showcase portfolio]</em></li>
+                    <li>Key features: <em>[e.g., contact form, blog, gallery, product pages, booking]</em></li>
+                    <li>Target audience: <em>[e.g., local riders, tourists, hobby photographers, students]</em></li>
+                </ul>
+            </section>
+
+            <!-- SCENARIOS -->
+            <section class="card" id="scenarios">
+                <h2>Scenarios (User questions)</h2>
+                <p>Write at least two real visitor questions that your site must answer.</p>
+                <ol>
+                    <li>Where can I find contact information for the organization or the site owner?</li>
+                    <li>What are the recommended products/trails/tips for a beginner in my area?</li>
+                </ol>
+                <p class="muted">Replace these examples with questions tailored to your project's audience.</p>
+            </section>
+
+            <!-- COLOR SCHEMA -->
+            <section class="card" id="colors">
+                <h2>Color Schema</h2>
+                <p>Define at least two colors and indicate where each is used. This document uses the colors below.</p>
+
+                <div class="two-col">
+                    <div>
+                        <div class="swatch" style="background:#fff">
+                            <div class="box" style="background:var(--primary)"></div>
+                            <div>
+                                <div><strong>Primary:</strong> <code>#0A6E8C</code></div>
+                                <div class="muted">Used for headings, primary buttons, and major accents.</div>
+                            </div>
+                        </div>
+
+                        <div style="height:.6rem"></div>
+
+                        <div class="swatch" style="background:#fff">
+                            <div class="box" style="background:var(--accent)"></div>
+                            <div>
+                                <div><strong>Accent:</strong> <code>#FFB703</code></div>
+                                <div class="muted">Used for call-to-action, icons, and highlights.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="swatch" style="background:#fff">
+                            <div class="box" style="background:var(--bg)"></div>
+                            <div>
+                                <div><strong>Background:</strong> <code>#F4F7F9</code></div>
+                                <div class="muted">Page background and large surfaces.</div>
+                            </div>
+                        </div>
+
+                        <div style="height:.6rem"></div>
+
+                        <div class="swatch" style="background:#fff">
+                            <div class="box" style="background:var(--muted)"></div>
+                            <div>
+                                <div><strong>Muted text:</strong> <code>#6B7280</code></div>
+                                <div class="muted">Supportive/secondary text and captions.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="muted" style="margin-top:.75rem">This color schema is applied across the site plan; update the
+                    <code>:root</code> variables at the top of this file to change the palette globally.</p>
+            </section>
+
+            <!-- TYPOGRAPHY -->
+            <section class="card" id="typography">
+                <h2>Typography</h2>
+                <p>Select 1–3 fonts and describe where each will be used. This file loads Google Fonts for quick
+                    prototyping.</p>
+                <ul>
+                    <li><strong>Headings:</strong> Montserrat — used for H1/H2/H3 and display elements (weights
+                        600/700).</li>
+                    <li><strong>Body:</strong> Inter — used for paragraphs, lists, captions (weights 300/400/600).</li>
+                </ul>
+                <p class="muted">Tip: Keep font choices minimal for consistency and performance. Use
+                    <code>font-display:swap</code> when hosting fonts.</p>
+            </section>
+
+            <!-- WIREFRAME -->
+            <section class="card" id="wireframe">
+                <h2>Wireframe (Home page)</h2>
+                <p>Simple visual sketches for mobile and wide desktop. These are illustrative — replace with hand
+                    sketches or more detailed diagrams if you prefer.</p>
+
+                <div class="wireframes">
+                    <!-- Mobile wireframe -->
+                    <div class="wf" aria-hidden="true">
+                        <strong>Mobile (360×800)</strong>
+                        <svg viewBox="0 0 360 800" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="mobile wireframe">
+                            <rect x="8" y="10" width="344" height="60" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="180" y="44" text-anchor="middle" font-size="12" fill="#94a3b8">Header / Logo</text>
+
+                            <rect x="12" y="82" width="336" height="160" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="180" y="160" text-anchor="middle" font-size="12" fill="#94a3b8">Hero (image +
+                                title)</text>
+
+                            <rect x="12" y="254" width="336" height="80" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="180" y="302" text-anchor="middle" font-size="12" fill="#94a3b8">Intro / CTA</text>
+
+                            <rect x="12" y="344" width="336" height="360" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="180" y="520" text-anchor="middle" font-size="12" fill="#94a3b8">Content blocks
+                                (cards / gallery / posts)</text>
+
+                            <rect x="12" y="714" width="336" height="60" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="180" y="748" text-anchor="middle" font-size="12" fill="#94a3b8">Footer</text>
+                        </svg>
+                    </div>
+
+                    <!-- Desktop wireframe -->
+                    <div class="wf" aria-hidden="true">
+                        <strong>Desktop (1200×800)</strong>
+                        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="desktop wireframe">
+                            <rect x="16" y="16" width="1168" height="92" rx="10" fill="#fff" stroke="#dbe6ea" />
+                            <text x="600" y="66" text-anchor="middle" font-size="16" fill="#94a3b8">Header / Nav</text>
+
+                            <rect x="16" y="120" width="760" height="280" rx="10" fill="#fff" stroke="#dbe6ea" />
+                            <text x="396" y="260" text-anchor="middle" font-size="14" fill="#94a3b8">Hero /
+                                Feature</text>
+
+                            <rect x="792" y="120" width="392" height="280" rx="10" fill="#fff" stroke="#dbe6ea" />
+                            <text x="988" y="260" text-anchor="middle" font-size="14" fill="#94a3b8">Sidebar (links,
+                                CTA)</text>
+
+                            <rect x="16" y="420" width="1168" height="300" rx="10" fill="#fff" stroke="#dbe6ea" />
+                            <text x="600" y="570" text-anchor="middle" font-size="14" fill="#94a3b8">Content area
+                                (cards, gallery, blog list)</text>
+
+                            <rect x="16" y="734" width="1168" height="50" rx="8" fill="#fff" stroke="#dbe6ea" />
+                            <text x="600" y="764" text-anchor="middle" font-size="12" fill="#94a3b8">Footer</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="muted" style="margin-top:.5rem">Sketch notes: Keep navigation clear, make primary CTA visible
+                    in the hero, and ensure content blocks stack responsively on small screens.</p>
+            </section>
+
+            <!-- CSS / Files -->
+            <section class="card" id="css">
+                <h2>CSS & Supporting files</h2>
+                <p>Keep styling modular. Example file structure for your project:</p>
+                <pre>project/
+
+├─ index.html ├─ siteplan.html   (this file) ├─ css/ │   └─ styles.css ├─ images/ └─ scripts/ └─ main.js </pre>
+                <p class="muted">This site plan contains a minimal internal stylesheet for prototyping. When you build
+                    the real site, extract styles to <code>css/styles.css</code>.</p>
+            </section>
+
+            <!-- TESTING -->
+            <section class="card" id="testing">
+                <h2>Testing (self-check)</h2>
+                <p>Run these checks as you develop the project:</p>
+                <ul>
+                    <li>HTML validation (W3C validator) — ensure no structural errors.</li>
+                    <li>Accessibility (use Lighthouse &amp; axe) — headings, alt text, ARIA where needed.</li>
+                    <li>Contrast checks — confirm text meets AA/AAA where required.</li>
+                    <li>Performance — validate images, minimize blocking CSS/JS, test with Lighthouse/PageSpeed.</li>
+                    <li>SEO basics — page titles, meta description, semantic headings.</li>
+                </ul>
+                <p class="muted">Document any issues you find and the fixes you applied so your submission notes show
+                    testing work.</p>
+            </section>
+
+            <footer>
+                Week 05 Project: Website Planning Document — <strong>Copyright © Brigham Young University‑Idaho</strong>
+            </footer>
+
+        </div>
+    </body>
+
+</html>
