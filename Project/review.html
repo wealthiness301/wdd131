@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Review Confirmation</title>
+        <link rel="stylesheet" href="styles/form.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let count = Number(localStorage.getItem("reviewCount")) || 0;
+                count++;
+                localStorage.setItem("reviewCount", count);
+                document.getElementById("counter").textContent = count;
+                document.getElementById("lastModified").textContent = document.lastModified;
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Thank You for Your Review!</h1>
+        </header>
+
+        <main>
+            <p>Your review has been successfully submitted.</p>
+            <p>You have submitted <strong><span id="counter"></span></strong> reviews.</p>
+        </main>
+
+        <footer>
+            <p>©2025 🌸 Wealth Osaigbovo 🌸 Nigeria<br>
+                Last Modification: <span id="lastModified"></span>
+            </p>
+        </footer>
+    </body>
+
+</html>
