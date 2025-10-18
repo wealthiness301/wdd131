@@ -1,0 +1,212 @@
+:root {
+    --primary: #2E8B57;
+    --accent: #4b004b;
+    --bg: #FFF8E7;
+    --card: #ffffff;
+    --text: #222;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 1.25rem auto;
+    padding: 0 1rem
+}
+
+.header,
+.header .container {}
+
+.header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    margin-right: 6px;
+}
+
+/* header style */
+.header {
+    background: linear-gradient(90deg, var(--accent), #6b0d66);
+    color: white;
+    padding: 1rem 0;
+}
+
+/* hero */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hero-inner h2 {
+    font-size: 1.6rem;
+    margin: 0
+}
+
+.lead {
+    margin-top: 0.5rem;
+    color: #fffefc;
+    opacity: 0.95
+}
+
+/* grid/cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem
+}
+
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 0
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block
+}
+
+.card-content {
+    padding: 0.9rem
+}
+
+.card h3 {
+    margin: 0 0 .4rem;
+    color: var(--accent)
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: .5rem
+}
+
+.small {
+    font-size: .95rem;
+    color: var(--muted)
+}
+
+/* forms and inputs */
+label {
+    display: block;
+    margin-top: .75rem;
+    font-weight: 600
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: .3rem
+}
+
+input[type="submit"],
+.btn {
+    display: inline-block;
+    padding: .6rem .9rem;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    opacity: .95
+}
+
+/* search/filter */
+.filters {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem
+}
+
+.filters input {
+    flex: 1
+}
+
+/* recipe detail layout */
+.recipe-detail {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+.recipe-img {
+    flex: 1 1 320px
+}
+
+.recipe-body {
+    flex: 2 1 380px;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px
+}
+
+/* footer */
+footer {
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 4px solid rgba(0, 0, 0, 0.06)
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline
+}
+
+/* responsive */
+@media(max-width:700px) {
+    .hero {
+        height: 180px
+    }
+
+    .recipe-detail {
+        flex-direction: column
+    }
+
+    .filters {
+        flex-direction: column
+    }
+}

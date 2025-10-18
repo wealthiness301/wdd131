@@ -1,0 +1,70 @@
+[
+    {
+        "id": "r1",
+        "title": "Quinoa & Kale Salad",
+        "summary": "A light, protein-rich salad with crunchy almonds and lemon vinaigrette.",
+        "time": "15 mins",
+        "difficulty": "Easy",
+        "image": "images/salad.jpg",
+        "ingredients": [
+            "1 cup cooked quinoa",
+            "2 cups chopped kale",
+            "1/4 cup almonds",
+            "2 tbsp lemon juice",
+            "1 tbsp olive oil"
+        ],
+        "steps": [
+            "Cook quinoa according to package.",
+            "Massage kale with lemon and oil.",
+            "Toss quinoa, kale and almonds together."
+        ],
+        "tags": [
+            "vegetarian",
+            "gluten-free"
+        ]
+    },
+    {
+        "id": "r2",
+        "title": "Berry Spinach Smoothie",
+        "summary": "A quick antioxidant-packed smoothie for breakfast or post-workout.",
+        "time": "5 mins",
+        "difficulty": "Very Easy",
+        "image": "images/smoothie.jpg",
+        "ingredients": [
+            "1 cup spinach",
+            "1/2 cup mixed berries",
+            "1 banana",
+            "1 cup almond milk"
+        ],
+        "steps": [
+            "Combine all ingredients in blender.",
+            "Blend until smooth."
+        ],
+        "tags": [
+            "vegan",
+            "quick"
+        ]
+    },
+    {
+        "id": "r3",
+        "title": "Baked Salmon with Herbs",
+        "summary": "Simple oven-baked salmon that's flaky and flavorful.",
+        "time": "25 mins",
+        "difficulty": "Medium",
+        "image": "images/salmon.jpg",
+        "ingredients": [
+            "2 salmon fillets",
+            "1 tbsp olive oil",
+            "1 tsp dried dill",
+            "salt & pepper"
+        ],
+        "steps": [
+            "Preheat oven to 400°F (200°C).",
+            "Season salmon and bake 12-15 minutes."
+        ],
+        "tags": [
+            "pescatarian",
+            "high-protein"
+        ]
+    }
+]

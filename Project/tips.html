@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Tips - Healthy Recipes Blog</title>
+        <meta name="description" content="Nutrition & cooking tips; submit your own recipe." />
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1>Healthy Living Tips</h1>
+                <nav class="nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="tips.html">Tips</a>
+                    <a href="references.html">References</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="grid">
+                <article class="card">
+                    <h2>Nutrition Tips</h2>
+                    <p class="small">Plan meals ahead, include colorful vegetables, prefer whole grains, and balance
+                        proteins & healthy fats.</p>
+                    <details>
+                        <summary>Read more</summary>
+                        <p class="small">If you want quick nutrient boosts, add spinach to smoothies, use herbs instead
+                            of salt, and prep grains in bulk.</p>
+                    </details>
+                </article>
+
+                <article class="card form">
+                    <h2>Submit a Recipe</h2>
+                    <form id="submitRecipe" aria-label="Submit recipe form">
+                        <label for="title">Recipe Title</label>
+                        <input id="title" name="title" required>
+
+                        <label for="summary">Short Summary</label>
+                        <input id="summary" name="summary" required>
+
+                        <label for="time">Time (e.g., 20 mins)</label>
+                        <input id="time" name="time">
+
+                        <label for="difficulty">Difficulty</label>
+                        <select id="difficulty" name="difficulty">
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select>
+
+                        <label for="ingredients">Ingredients (comma separated)</label>
+                        <input id="ingredients" name="ingredients" placeholder="1 cup quinoa, 2 cups kale">
+
+                        <label for="steps">Steps (semicolon separated)</label>
+                        <input id="steps" name="steps" placeholder="cook quinoa; toss kale; combine">
+
+                        <input type="submit" class="btn" value="Save Recipe">
+                    </form>
+                    <p class="small">Saved recipes are stored in your browser (localStorage) and displayed with the
+                        other recipes.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>©2025 Wealth Obehioye Osaigbovo • Healthy Recipes Blog • WDD131 • <a
+                        href="references.html">References</a></p>
+            </div>
+        </footer>
+    </body>
+
+</html>
