@@ -35,7 +35,7 @@ function initLazyLoading() {
             entries.forEach(e => {
                 if (e.isIntersecting) {
                     const img = e.target;
-                    img.src = img.dataset.src || 'images/lazy-placeholder.png';
+                    img.src = img.dataset.src || 'images/hero.webp';
                     img.classList.remove('lazy');
                     obs.unobserve(img);
                 }
@@ -43,7 +43,7 @@ function initLazyLoading() {
         }, { rootMargin: '100px' });
         images.forEach(img => io.observe(img));
     } else {
-        images.forEach(img => { img.src = img.dataset.src || 'images/lazy-placeholder.png'; });
+        images.forEach(img => { img.src = img.dataset.src || 'images/hero.webp'; });
     }
 }
 
