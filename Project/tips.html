@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,7 +8,6 @@
         <link rel="stylesheet" href="styles/main.css" />
         <script src="scripts/main.js" defer></script>
     </head>
-
     <body>
         <header class="header">
             <div class="container">
@@ -22,7 +20,6 @@
                 </nav>
             </div>
         </header>
-
         <main class="container">
             <section class="grid">
                 <article class="card">
@@ -35,32 +32,25 @@
                             of salt, and prep grains in bulk.</p>
                     </details>
                 </article>
-
                 <article class="card form">
                     <h2>Submit a Recipe</h2>
                     <form id="submitRecipe" aria-label="Submit recipe form">
                         <label for="title">Recipe Title</label>
                         <input id="title" name="title" required>
-
                         <label for="summary">Short Summary</label>
                         <input id="summary" name="summary" required>
-
                         <label for="time">Time (e.g., 20 mins)</label>
                         <input id="time" name="time">
-
                         <label for="difficulty">Difficulty</label>
                         <select id="difficulty" name="difficulty">
                             <option>Easy</option>
                             <option>Medium</option>
                             <option>Hard</option>
                         </select>
-
                         <label for="ingredients">Ingredients (comma separated)</label>
                         <input id="ingredients" name="ingredients" placeholder="1 cup quinoa, 2 cups kale">
-
                         <label for="steps">Steps (semicolon separated)</label>
                         <input id="steps" name="steps" placeholder="cook quinoa; toss kale; combine">
-
                         <input type="submit" class="btn" value="Save Recipe">
                     </form>
                     <p class="small">Saved recipes are stored in your browser (localStorage) and displayed with the
@@ -68,7 +58,6 @@
                 </article>
             </section>
         </main>
-
         <footer>
             <div class="container">
                 <p>©2025 Wealth Obehioye Osaigbovo • Healthy Recipes Blog • WDD131 • <a
@@ -76,5 +65,4 @@
             </div>
         </footer>
     </body>
-
 </html>

@@ -1,6 +1,5 @@
 // scripts/main.js
 // Uses template literals for building HTML output, DOM manipulation, localStorage, lazy-loading.
-
 async function fetchRecipes() {
     const res = await fetch('data/recipes.json');
     const data = await res.json();
@@ -8,7 +7,6 @@ async function fetchRecipes() {
     // user-submitted recipes appear first
     return [...user, ...data];
 }
-
 function createCardHTML(r) {
     return `
     <article class="card" data-id="${r.id}">
@@ -22,12 +20,10 @@ function createCardHTML(r) {
     </article>
   `;
 }
-
 function renderRecipes(list, container) {
     container.innerHTML = list.map(r => createCardHTML(r)).join('');
     initLazyLoading();
 }
-
 function initLazyLoading() {
     const images = document.querySelectorAll('img.lazy');
     if ('IntersectionObserver' in window) {
@@ -46,27 +42,22 @@ function initLazyLoading() {
         images.forEach(img => { img.src = img.dataset.src || 'images/hero.webp'; });
     }
 }
-
 // favorites stored in localStorage as array of ids
 function getFavorites() {
     return JSON.parse(localStorage.getItem('favorites') || '[]');
 }
-
 function saveFavorite(id) {
     const fav = getFavorites();
     if (!fav.includes(id)) { fav.push(id); localStorage.setItem('favorites', JSON.stringify(fav)); }
 }
-
 function removeFavorite(id) {
     let fav = getFavorites();
     fav = fav.filter(x => x !== id);
     localStorage.setItem('favorites', JSON.stringify(fav));
 }
-
 function isFavorite(id) {
     return getFavorites().includes(id);
 }
-
 async function renderRecipeDetail(id) {
     const list = await fetchRecipes();
     const r = list.find(x => x.id === id);
@@ -134,22 +125,18 @@ function setupSubmitRecipeForm() {
         form.reset();
     });
 }
-
 // initialization
 document.addEventListener('DOMContentLoaded', async () => {
     const recipesList = await fetchRecipes();
-
     // homepage listing
     const listing = document.getElementById('listing');
     if (listing) renderRecipes(recipesList.slice(0, 6), listing);
-
     // recipes page list + search/filter
     const recipesContainer = document.getElementById('recipes-list');
     if (recipesContainer) {
         renderRecipes(recipesList, recipesContainer);
         setupSearchAndFilter(recipesList, recipesContainer);
     }
-
     // recipe detail if URL has a hash
     if (location.hash) {
         const id = location.hash.replace('#', '');
@@ -160,7 +147,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderRecipeDetail(recipesList[0].id);
         }
     }
-
     // submit recipe on tips page
     setupSubmitRecipeForm();
 });
